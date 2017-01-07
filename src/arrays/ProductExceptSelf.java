@@ -9,14 +9,14 @@ public class ProductExceptSelf {
 
     public int[] productExceptSelf(int[] nums) {
 
-        int i=0, multiplier =1, len = nums.length ;
+        int i, multiplier =1, len = nums.length ;
         int[] product = new int[len];
         for( i =0 ; i < len ; i++) {
             product[i] = multiplier;
             multiplier *= nums[i];
         }
         multiplier = 1;
-        for(i = len-1 ; i>=0; i--) {
+        for(i = len-1 ; i >= 0; i--) {
             product[i] *= multiplier ;
             multiplier *= nums[i];
         }

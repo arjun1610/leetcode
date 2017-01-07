@@ -25,15 +25,14 @@ public class TwoSum {
     }
     public int[] twoSumNaive(int[] nums, int target){
         int len = nums.length;
-        if(len <=1 )
+        if(len <= 1 )
             return new int[]{0,0};
-        if(len ==2 )
+        if(len == 2 )
             return new int[]{nums[0], nums[1]};
 
-        for(int i = 0 ; i< len; i++) {
-             int a = nums[i];
+        for(int i = 0 ; i < len; i++) {
              int b = target-nums[i];
-             for (int j = i+1; j< len ; j++) {
+             for (int j = i+1; j < len ; j++) {
                  if (nums[j] == b)
                      return new int[]{i,j};
              }
